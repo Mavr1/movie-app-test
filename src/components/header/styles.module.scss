@@ -1,12 +1,11 @@
 @import '../../helpers/variables.scss';
 
 .headerMain {
+  position: relative;
   padding: 150px 0 106px 0;
   height: 690px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../assets/img/main_banner.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .inner {
@@ -25,15 +24,16 @@
 .year {
   font-family: 'Montserrat Bold';
   font-size: 24px;
-  color: $main-dark-color;
+  color: $white-color;
 }
 
 .movieTitle {
   font-family: 'Montserrat Bold';
+  max-width: 70%;
   font-size: 48px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $main-dark-color;
+  color: $white-color;
 }
 
 .navButton {

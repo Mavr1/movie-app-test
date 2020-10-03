@@ -1,0 +1,47 @@
+@import '../../helpers/variables.scss';
+
+.container {
+  width: 766px;
+  margin-left: auto;
+}
+
+.movies {
+  margin-bottom: 100px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 358px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pageNumber {
+  font-family: 'Montserrat Medium';
+  font-size: 18px;
+  color: $white-color;
+}
+
+.navButton {
+  width: 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonTitle {
+  font-size: 18px;
+  color: $white-color;
+}
+
+.back {
+  font-family: 'Montserrat Bold';
+}
+
+.forward {
+  font-family: 'Montserrat Regular';
+}

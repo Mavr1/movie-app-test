@@ -1,0 +1,35 @@
+@import '../../helpers/variables.scss';
+
+.movieItem {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.wrapper {
+  text-align: right;
+}
+
+.year,
+.type,
+.title {
+  font-family: 'Montserrat Medium';
+  color: $list-color;
+}
+
+.title {
+  font-size: 36px;
+  max-width: 70%;
+}
+
+.year,
+.type {
+  font-size: 18px;
+}
+
+.year {
+  margin-bottom: 6px;
+}

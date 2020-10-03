@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { ReactComponent as SearchIco } from '../../assets/UI/search_ico.svg';
 import styles from './styles.module.scss';
 
-const SearchBar = ({ setQuery }) => {
+const SearchBar = () => {
   const [input, setInput] = useState('');
+
+  const history = useHistory();
 
   const handleInput = ({ target }) => setInput(target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setQuery(input);
+    history.push(`/movies?title=${input}`);
+    setInput('');
   };
 
   return (

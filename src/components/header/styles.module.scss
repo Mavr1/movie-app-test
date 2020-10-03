@@ -1,7 +1,50 @@
+@import '../../helpers/variables.scss';
+
 .headerMain {
   padding: 150px 0 106px 0;
+  height: 690px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../../assets/img/main_banner.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleWrapper,
+.navControls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.year {
+  font-family: 'Montserrat Bold';
+  font-size: 24px;
+  color: $main-dark-color;
+}
+
+.movieTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $main-dark-color;
+}
+
+.navButton {
+  display: flex;
+  width: 144px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonTitle {
+  font-family: 'Montserrat Medium';
+  font-size: 24px;
+  color: $white-color;
 }

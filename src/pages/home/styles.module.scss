@@ -1,0 +1,12 @@
+@import '../../helpers/variables.scss';
+
+.main {
+  margin-bottom: 200px;
+}
+
+.pageTitle {
+  transform: translateY(-50%);
+  font-family: 'Montserrat Bold';
+  font-size: 64px;
+  color: $white-color;
+}

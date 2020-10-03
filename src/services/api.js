@@ -6,5 +6,6 @@ export const search = async (query) => {
   const { data } = await axios.get(
     `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${query}`
   );
-  return data.search;
+
+  return data;
 };

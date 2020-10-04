@@ -4,7 +4,7 @@ export const search = async (query, page = 1) => {
   if (!query) return;
 
   const { data } = await axios.get(
-    `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${query}&page=${page}`
+    `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${query}&page=${page}`
   );
 
   return data;
@@ -12,7 +12,7 @@ export const search = async (query, page = 1) => {
 
 export const getPosterById = async (id) => {
   const response = await axios.get(
-    `http://img.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${id}`
+    `https://img.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${id}`
   );
 
   return response;
@@ -20,7 +20,7 @@ export const getPosterById = async (id) => {
 
 export const getMovieById = async (id) => {
   const response = await axios.get(
-    `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${id}&plot=full`
+    `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${id}&plot=full`
   );
 
   return response;

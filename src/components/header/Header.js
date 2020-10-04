@@ -4,7 +4,7 @@ import { ReactComponent as ArrowBack } from '../../assets/UI/arrow_back.svg';
 import { ReactComponent as ArrowForward } from '../../assets/UI/arrow_forward.svg';
 import styles from './styles.module.scss';
 
-const Header = ({ data, title, active, page }) => {
+const Header = ({ data, title, active, page, length }) => {
   const image = data?.Poster || require('../../assets/img/main_banner.jpg');
 
   return (
@@ -25,16 +25,24 @@ const Header = ({ data, title, active, page }) => {
               to={{
                 search: `?title=${title}&i=${+active - 1}&page=${page}`,
               }}
-              className={styles.navButton}
+              className={
+                Number(active) - 1 < 0
+                  ? [styles.navButton, styles.disabled].join(' ')
+                  : styles.navButton
+              }
             >
               <ArrowBack />
               <p className={styles.buttonTitle}>Prev</p>
             </Link>
             <Link
               to={{
-                search: `?title=${title}&i=${+active + 1}&page=${page}`,
+                search: `?title=${title}&i=${Number(active) + 1}&page=${page}`,
               }}
-              className={styles.navButton}
+              className={
+                Number(active) + 1 > length - 1
+                  ? [styles.navButton, styles.disabled].join(' ')
+                  : styles.navButton
+              }
             >
               <p className={styles.buttonTitle}>Next</p>
               <ArrowForward />

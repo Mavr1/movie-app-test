@@ -50,3 +50,7 @@
   font-size: 24px;
   color: $light-font-color;
 }
+
+.disabled {
+  pointer-events: none;
+}

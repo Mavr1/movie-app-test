@@ -23,35 +23,49 @@ const MoviesList = ({ movies, active, title, page }) => {
               <MoviesItem
                 key={item.imdbID}
                 data={item}
-                isActive={active === idx.toString()}
+                isActive={Number(active) === idx}
               />
             ))}
           </ul>
           <footer className={styles.footer}>
             <p className={styles.pageNumber}>{`Items per page: ${10}`}</p>
             <div className={styles.wrapper}>
-              <Link
-                to={{
-                  search: `?title=${title}&i=0&page=${page - 1}`,
-                }}
-                className={styles.navButton}
-              >
-                <ArrowBack />
-                <p className={[styles.buttonTitle, styles.back].join(' ')}>{`${
-                  (page - 1) * 10 + 1
-                } - ${page * 10}`}</p>
-              </Link>
-              <Link
-                to={{
-                  search: `?title=${title}&i=0&page=${page + 1}`,
-                }}
-                className={styles.navButton}
-              >
+              <div className={styles.navButton}>
+                <Link
+                  to={{
+                    search: `?title=${title}&i=0&page=${page - 1}`,
+                  }}
+                  className={page - 2 < 0 ? styles.disabled : styles.null}
+                >
+                  <ArrowBack />
+                </Link>
+                <p
+                  className={
+                    active < 0
+                      ? [styles.buttonTitle, styles.back, styles.disabled].join(
+                          ' '
+                        )
+                      : [styles.buttonTitle, styles.back].join(' ')
+                  }
+                >{`${(page - 1) * 10 + 1} - ${page * 10}`}</p>
+              </div>
+              <div className={styles.navButton}>
                 <p className={[styles.buttonTitle, styles.forward].join(' ')}>
                   {movies.totalResults}
                 </p>
-                <ArrowForward />
-              </Link>
+                <Link
+                  to={{
+                    search: `?title=${title}&i=0&page=${page + 1}`,
+                  }}
+                  className={
+                    page > Math.ceil(movies.totalResults / 10) - 1
+                      ? styles.disabled
+                      : styles.null
+                  }
+                >
+                  <ArrowForward />
+                </Link>
+              </div>
             </div>
           </footer>
         </div>

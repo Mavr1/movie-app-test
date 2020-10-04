@@ -24,6 +24,7 @@ const HomePage = () => {
     <>
       <Header
         data={moviesList?.length > 0 ? moviesList[active] : false}
+        length={moviesList?.length}
         title={title}
         active={active}
         page={page}

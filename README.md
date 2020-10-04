@@ -26,5 +26,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Features to be added in future versions
 
 - Animations.
-- Implement infinite scroll.
-- Responsive, polished design.
+- Infinite scroll.
+- Responsive design.

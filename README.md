@@ -20,5 +20,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. Then I planned state structure. Since this is small app I decided not to use Redux and located main state in the component Home page (movies data) and Movie Details page (movie details information). Rest of the components getting props from this two. Also for state transfer I used route params and location state.
 3. I tried to avoid of big solid pieces of code and structure into small maintained components.
 4. Stylization performed using Sass.
-5. REST API request are made with axios library.
+5. REST API request are made with Axios library.
 6. The app was deployed on Netlify hosting service.
+
+### Features to be added in future versions
+
+- Animations.
+- Implement infinite scroll.
+- Responsive, polished design.

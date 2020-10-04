@@ -11,7 +11,7 @@ const SearchBar = () => {
   const handleInput = ({ target }) => setInput(target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`/movies?title=${input}`);
+    history.push(`/movies?title=${input}&i=0&page=1`);
     setInput('');
   };
 

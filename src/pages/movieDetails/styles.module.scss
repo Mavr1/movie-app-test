@@ -1,0 +1,98 @@
+@import '../../helpers/variables.scss';
+
+.header {
+  margin: 0 auto;
+  height: 360px;
+  max-width: 1350px;
+}
+
+.mainContainer {
+  padding: 50px 0;
+  position: relative;
+}
+
+.navButton {
+  margin: 0 0 40px auto;
+  display: flex;
+  width: 144px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonTitle {
+  font-family: 'Montserrat Medium';
+  font-size: 24px;
+  color: $light-font-color;
+}
+
+.title {
+  max-width: 544px;
+  margin: 0 0 50px 35%;
+  font-family: Montserrat Bold;
+  font-size: 48px;
+  color: $light-font-color;
+}
+
+.infoWrapper {
+  max-width: 480px;
+  margin-left: 50%;
+}
+
+.item,
+.itemValue {
+  font-size: 24px;
+  color: $light-font-color;
+}
+
+.item {
+  font-family: 'Montserrat Regular';
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+.itemValue {
+  font-family: 'Montserrat Medium';
+}
+
+.description {
+  font-family: 'Montserrat Medium';
+  font-size: 18px;
+  line-height: 150%;
+  color: $light-font-color;
+}
+
+.posterWrapper {
+  position: absolute;
+  top: -40px;
+  width: 360px;
+  height: 530px;
+}
+
+.poster {
+  margin-bottom: 50px;
+}
+
+.ratingTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 36px;
+  line-height: 44px;
+  color: $light-font-color;
+}
+
+.rating {
+  font-family: 'Montserrat Bold';
+  font-size: 48px;
+  line-height: 59px;
+  color: $light-font-color;
+}
+
+.maxRating {
+  font-size: 36px;
+  line-height: 44px;
+}

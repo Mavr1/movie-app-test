@@ -1,12 +1,18 @@
 @import '../../helpers/variables.scss';
 
 .movieItem {
-  display: flex;
-  justify-content: space-between;
-
   &:not(:last-child) {
     margin-bottom: 40px;
   }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .wrapper {
@@ -20,13 +26,27 @@
   color: $list-color;
 }
 
-.title {
+.yearActive,
+.typeActive,
+.titleActive {
+  font-family: 'Montserrat Bold';
+  color: $light-font-color;
+}
+
+.title,
+.titleActive {
   font-size: 36px;
   max-width: 70%;
 }
 
+.titleActive {
+  transform: translateX(-40px);
+}
+
 .year,
-.type {
+.yearActive,
+.type,
+.typeActive {
   font-size: 18px;
 }
 

@@ -4,12 +4,12 @@ import { ReactComponent as ArrowBack } from '../../assets/UI/arrow_back.svg';
 import { ReactComponent as ArrowForward } from '../../assets/UI/arrow_forward.svg';
 import styles from './styles.module.scss';
 
-const Header = ({ data }) => {
+const Header = ({ data, title, active, page }) => {
   const image = data?.Poster || require('../../assets/img/main_banner.jpg');
 
   return (
     <header
-      className={styles.headerMain}
+      className={styles.header}
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`,
       }}
@@ -21,11 +21,21 @@ const Header = ({ data }) => {
             <p className={styles.movieTitle}>{data.Title}</p>
           </div>
           <div className={styles.navControls}>
-            <Link to="/" className={styles.navButton}>
+            <Link
+              to={{
+                search: `?title=${title}&i=${+active - 1}&page=${page}`,
+              }}
+              className={styles.navButton}
+            >
               <ArrowBack />
               <p className={styles.buttonTitle}>Prev</p>
             </Link>
-            <Link to="/" className={styles.navButton}>
+            <Link
+              to={{
+                search: `?title=${title}&i=${+active + 1}&page=${page}`,
+              }}
+              className={styles.navButton}
+            >
               <p className={styles.buttonTitle}>Next</p>
               <ArrowForward />
             </Link>

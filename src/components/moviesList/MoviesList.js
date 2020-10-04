@@ -15,7 +15,7 @@ const MoviesList = ({ movies, active, title, page }) => {
           <ul className={styles.movies}>
             <img
               className={styles.poster}
-              src={list.length > 0 ? list[active].Poster : false}
+              src={list.length > 0 ? list[active]?.Poster : false}
               alt="movie poster"
               width={420}
             />
